@@ -1,0 +1,15 @@
+%table
+    %thead
+        %tr
+            %th Key
+            %th Value
+        %tr
+            %input(type='text')
+    %tfoot
+
+    %tbody
+        - @trads.each do |trad|
+            %tr
+                %td= trad.key
+                %td= trad.value
+        
