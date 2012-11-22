@@ -1,4 +1,7 @@
 class Trad
-    attr_accessor :key, :value
+	attr_accessor :id, :key, :value, :localized_values
 
+	def to_json(*args)
+		{ :key => @key, :value => @value }.to_json
+	end
 end

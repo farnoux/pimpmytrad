@@ -1,0 +1,17 @@
+%form.form-inline(ng-submit="search()")
+
+	.input-prepend
+		%button.btn(type="submit")
+			%i.icon-search
+		%input.span3(type="text" placeholder="Search translations" ng-model="filter")
+
+	%select.input-small
+		%option FR
+		%option ES
+		%option EN
+		%option DE
+
+	%select.input-medium
+		%option All
+		%option To be translated
+		%option Translated

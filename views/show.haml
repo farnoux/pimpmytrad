@@ -1,15 +1,20 @@
-%table
-    %thead
-        %tr
-            %th Key
-            %th Value
-        %tr
-            %input(type='text')
-    %tfoot
+.container-fluid
+	=haml :_search
+	%table.table.table-striped
+		%thead
+			%tr
+				%th Key
+				%th Value
+				%th Status
+				%th
+		%tfoot
 
-    %tbody
-        - @trads.each do |trad|
-            %tr
-                %td= trad.key
-                %td= trad.value
-        
+		%tbody
+			- @trads.each do |trad|
+				%tr
+					%td= trad.key
+					%td= trad.value
+					%td= trad.status
+					%td
+						%a.btn(href="#" ng-click="edit(trad)")
+							%i.icon-edit

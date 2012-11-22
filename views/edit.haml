@@ -1,0 +1,24 @@
+.container-fluid(ng-controller="TradCtrl")
+
+	=haml :_search
+	%table.table.table-striped.table-hover
+		%thead
+			%tr
+				%th Key
+				%th French
+				%th Status
+				%th
+			%tr
+				%td
+					%input.input-block-level(type="text")
+				%td
+				%td
+		%tfoot
+		%tbody
+			%tr(ng-repeat="trad in trads | filter: query")
+				%td {{trad.key}}
+				%td {{trad.value}}
+				%td {{trad.status}}
+				%td
+					%a.btn(href="#" ng-click="edit(trad)")
+						%i.icon-edit
