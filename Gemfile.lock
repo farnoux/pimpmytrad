@@ -1,10 +1,15 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    better_errors (0.2.0)
+      coderay (>= 1.0.0)
+      erubis (>= 2.7.0)
+    binding_of_caller (0.6.8)
+    coderay (1.0.8)
     daemons (1.1.8)
+    erubis (2.7.0)
     eventmachine (0.12.10)
     haml (3.1.6)
-    json (1.7.5)
     rack (1.4.1)
     rack-protection (1.2.0)
       rack
@@ -22,7 +27,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  better_errors
+  binding_of_caller
   haml
-  json
   sinatra
   thin
