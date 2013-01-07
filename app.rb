@@ -2,6 +2,10 @@ require 'sinatra'
 require 'haml'
 require 'better_errors'
 
+Dir['./lib/**/*.rb'].each do |file|
+	require file
+end
+
 use BetterErrors::Middleware
 BetterErrors.application_root = File.expand_path("..", __FILE__)
 
